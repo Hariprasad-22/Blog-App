@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root{
+    --cream:#DDEB9D;
+    --pastel-green:#A0C878;
+    --royal-blue:#27667B;
+    --navy-blue:#143D60;
+    --white:#FFFFFF;
+    --black:#000000;
+}
+body{
+    background: linear-gradient(to bottom, #f5f5dc, #faebd7, #f5f5dc) !important;
+    font-family: "Poppins", sans-serif !important;
+}
+.header{
+    margin-bottom: 50px;
+    padding: 5px 15px;
+    background-color:#27667B;
+    color: white;
+
+}
+.header a{
+    text-decoration: none;
+    color: white;   
+}
+.profile{
+    background-color: var(--pastel-green);
+}
+.article-dialog{
+    background-color: var(--pastel-green);
+}
+.nav-item{
+    background-color: var(--navy-blue);
+    color: white;
+}
+.article-form{
+    background-color: var(--cream);
+}

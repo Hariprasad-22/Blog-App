@@ -1,0 +1,96 @@
+###
+GET http://localhost:5000/user-api/
+###
+POST http://localhost:5000/user-api/user
+Content-Type: application/json
+
+{
+    "role":"user",
+    "firstName":"user2",
+    "lastName":"user2",
+    "email":"user2@gmail.com",
+    "profileImageUrl":"user2 profile",
+    "isActive":"true"
+}
+
+###
+POST http://localhost:5000/author-api/author
+Content-Type: application/json
+
+{
+    "role":"author",
+    "firstName":"author2",
+    "lastName":"author2",
+    "email":"author2@gmail.com",
+    "profileImageUrl":"author2 profile",
+    "isActive":"true"
+}
+###
+POST http://localhost:5000/author-api/article
+Content-Type: application/json
+
+{
+    "authorData":{
+        "nameofAuthor":"author1",
+        "email":"author1@gmail.com",
+        "ProfileImageURL":"author 1"
+    },
+    "articleId":"{{$timestamp}}",
+    "title":"Fundamentals of JAVA script",
+    "category":"test",
+    "content":"What is JavaScript?\nJavaScript is the programming language of the web.\nIt can update and change both HTML and CSS.\nIt can calculate, manipulate and validate data.",
+    "dateOfCreation":"{{$datetime rfc1123}}",
+    "dateOfModification":"{{$datetime rfc1123}}",
+    "comments":[],
+    "isArticleActive":true
+}
+###
+PUT http://localhost:5000/author-api/articles/1742318811
+Content-Type: application/json
+
+{
+    
+    "_id": "67d97edca0488fe8f93483d4",
+    "authorData":{
+        "nameofAuthor":"author1",
+        "email":"author1@gmail.com",
+        "ProfileImageURL":"author 1"
+    },
+    "articleId":"{{$timestamp}}",
+    "title":"Fundamentals of JS",
+    "category":"programming",
+    "content":"What is JavaScript?\nJavaScript is the programming language of the web.\nIt can update and change both HTML and CSS.\nIt can calculate, manipulate and validate data.",
+    "dateOfModification":"{{$datetime rfc1123}}",
+    "comments":[],
+    "isArticleActive":true
+}
+###
+PUT http://localhost:5000/author-api/article/1742318811
+Content-Type: application/json
+
+{
+    
+    "_id": "67d97edca0488fe8f93483d4",
+    "authorData":{
+        "nameofAuthor":"author1",
+        "email":"author1@gmail.com",
+        "ProfileImageURL":"author 1"
+    },
+    "articleId":"{{$timestamp}}",
+    "title":"Fundamentals of JS",
+    "category":"programming",
+    "content":"What is JavaScript?\nJavaScript is the programming language of the web.\nIt can update and change both HTML and CSS.\nIt can calculate, manipulate and validate data.",
+    "dateOfModification":"{{$datetime rfc1123}}",
+    "comments":[],
+    "isArticleActive":true
+}
+###
+PUT http://localhost:5000/user-api/comment/1742318811
+Content-Type: application/json
+
+{
+    "nameofUser":"user1",
+    "comment":"good content"
+}
+###
+GET http://localhost:5000/author-api/articles
